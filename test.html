@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="test.css">
     <title>Password Generator</title>
   </head>
-  <body>
+  <body class="background">
+     
+      
     <script src="test.js"></script>
+    <div class="bigBox">
     <header>
-      <h1>Password Generator</h1>
+      <h1 class="box1">Password Generator</h1>
     </header>
-    <h2>Generate a Password</h2>
+    <h2 class="box2">Generate a Password</h2>
     <textarea
       readonly
       id="password"
       placeholder="Your Secure Password"
     ></textarea>
+    
     <div id="output">
     <button id="generate" onclick="generatePass()">Generate Password</button>
     <button id="copy" onclick="myfunction()">Copy to Clipboard</button>
+    </div>
     </div>
   </body>
 </html>

@@ -13,16 +13,18 @@
     
     
     var generatePass = function() {
-    alert("password must contain between 8 to 128 characters");
+    alert("Password must contain between 8 to 128 characters");
     var passwordLength = prompt("How many characters would you like?");
     
     if (passwordLength < 8) 
-    alert("It has to be at least 8 characters!");
+    return alert("It has to be at least 8 characters!");
     if (passwordLength > 128)
-    alert("No more than 128 characters");
+    return alert("No more than 128 characters");
+    if (passwordLength < 8 || passwordLength > 128)
+   
     
     
-    var upperLength = confirm("Woukd you like upper case letters?");
+    var upperLength = confirm("Would you like upper case letters?");
     
     var lowerLength = confirm("Would you like lower case letters?");
     
@@ -44,6 +46,7 @@
     if (specialLength) {
     arr = arr.concat(special)
     }
+    
     console.log(arr)
     for(var i = 0; i < passwordLength; i++) {
         var x = Math.floor(Math.random()*arr.length);
